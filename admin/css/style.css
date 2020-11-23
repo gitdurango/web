@@ -1,0 +1,46 @@
+@import url('../../css/style.css');
+
+#personaLogin{
+    width: 30%;
+    height: 30%;
+}
+
+.formularioEmpleado{
+    height: 120px;
+    background-color: rgb(26, 26, 26);
+    display: inline-block;
+    width: 50%;
+    padding: 2pxpx;
+    margin: 5px auto;
+    box-sizing: border-box;
+    border: none;
+    border-top: 2px solid black;
+}
+
+.labelEmpleado{
+    display: block;
+}
+
+.labelEmpleado input{
+    width: 100%;
+    background-color: transparent;
+}
+
+.labelEmpleado input:hover{
+    color: white;
+}
+
+#acceder{
+    width: 100%;
+    color:rgb(26, 26, 26);
+}
+
+.bg-image-y{
+    background-color: #111111;
+}
+
+#img-div-mov{
+    display: block;
+    margin: auto;
+    height: 200px;
+}

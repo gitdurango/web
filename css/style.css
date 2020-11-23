@@ -1,0 +1,236 @@
+:root {
+    --dark: #0A0A0A;
+    --dark-x: #111111;
+    --dark-xx: #222222;
+    --light: #ffffff;
+    --primary: #60b0ff;
+    --primary-x: #3041fe;
+    --muted: #A1B0BF;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 300; }
+
+a { color: var(--primary); }
+
+a:hover {
+    color: var(--primary-x);
+    text-decoration: none;
+}
+
+.font-weight-bold { font-weight: 600 !important; }
+
+.navbar { min-height: 5rem; }
+
+.text-primary {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-x) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-muted { color: var(--muted) !important; }
+
+small { font-weight: 300; }
+
+.btn {
+    font-weight: 700;
+    padding: .8rem 1rem;
+    border: 0;
+    border-radius: .4rem;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-x) 100%);
+    background-color: none;
+    color: var(--light) !important;
+}
+
+.btn-secondary { background-color: var(--dark-xx); }
+
+.btn-secondary:hover {
+    background-color: var(--dark-xx);
+    opacity: .8;
+}
+
+.bg-primary { background: linear-gradient(90deg, var(--primary) 0%, var(--primary-x) 100%); }
+
+.bg-dark { background-color: var(--dark) !important; }
+
+.bg-dark-x { background-color: var(--dark-x); }
+
+.bg-image {
+    background-image: url('../img/bg-dark-1.svg');
+    background-size: cover;
+    min-height: 1000px;
+}
+
+.bg-image-x {
+    background-image: url('../img/bg-dark-2.svg');
+    background-size: cover;
+    min-height: 1000px;
+}
+
+.bg-image-xx {
+    background-image: url('../img/bg-dark-3.svg');
+    background-size: cover;
+    min-height: 500px;
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+}
+
+.shadow {
+    box-shadow:  0 .5rem .5rem 0 rgba(0,0,0,.5)!important;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.border-top {
+    border-top: 1px solid rgba(256, 256, 256, .1) !important;
+}
+
+.rounded-top {
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+
+.rounded-bottom {
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+}
+
+.form-control {
+    background-color: var(--dark-xx);
+    height: unset;
+    padding: .8rem 1rem;
+    border: 0;
+}
+
+.form-control:focus {
+    background-color: var(--dark-xx);
+}
+
+@media (max-width: 575.98px) {
+    .w-75 {
+        width: 100% !important;
+    }
+    .py-5 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+    .btn {
+        width: 100%;
+    }
+    .list-inline-item {
+        display: block;
+        text-align: center;
+    }
+    footer {
+        text-align: center;
+    }
+    footer .list-inline-item {
+        display: inline-block;
+    }
+    footer .text-right {
+        text-align: center !important;
+    }
+    footer small {
+        display: block;
+    }
+}
+
+.slide-contenedor{
+    max-width:50%;
+    max-height: 50vh;
+    width: 50%;
+    height:auto;
+    position: relative;
+    overflow: hidden;
+    /* margin: auto; */
+}
+
+/* .miSlider{
+    display: none;
+    transition: 2s;
+    max-height: 100vh;
+} */
+
+.miSlider img{
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: center;
+    transition: 200s;
+}
+
+.direcciones{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 200px;
+}
+
+.direcciones a{
+    color: #fff;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.direcciones a:hover{
+    background: rgba(0, 0, 0, .5);
+    transition: 60s;
+}
+
+.barras{
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    display: flex;
+    justify-content: center;
+    margin-bottom:15px;
+}
+
+.barra{
+    cursor: pointer;
+    height:4px;
+    width: 100px;
+    margin: 0 2px;
+    background: #dcdde1;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.active{
+    background-color: #e74c3c;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;    
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to{opacity:1;}
+}
+
+.btn{
+    margin: 10px auto;
+}
+
