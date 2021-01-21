@@ -37,15 +37,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="#">Productos</a>
+                        <a class="nav-link" href="./productos.html">Productos</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="#">Servicios</a>
+                        <a class="nav-link" href="./servicios.html">Servicios</a>
                     </li>
-                        <a class="nav-link text-light font-weight-bold" href="#">Contáctanos</a>
+                        <a class="nav-link text-light font-weight-bold" href="./contactanos.html">Contáctanos</a>
                     </li>
                 </ul>
             </div>
@@ -72,9 +72,60 @@
                         <br>
                     </p>
                     <div class="mb-5">
-                    <a href="#" class="btn btn-primary mr-2 mb-3 shadow">Agenda con nosotros</a>
-                    <a href="#" class="btn btn-secondary mb-3">consultanos</a>
-                    </div>
+                        <div class="text-center">
+                            <a href="" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm">Agenda con nosotros
+                          </a>
+                    <a href="https://api.whatsapp.com/send?phone=+526181572410" class="btn btn-secondary mb-3">consultanos</a>
+                    <form class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document" id="citasformulario" enctype="multipart/form-data" method="POST">
+    <div class="modal-content"  id="citas">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Agenda tu cita</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form34" name="nombre" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Tu nombre</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix red-text"></i>
+          <input type="email" id="form29" name="email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Tu email</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <input type="text" id="form32" name="asunto" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form32">Asusnto</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" name="mensaje" class="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Tu mensaje</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <a href="" id="enviar" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm">Cerrar</a>
+        <button type="button" class="btn btn-primary" id="btnEliminar">Si</button>
+    </div>
+    </div>
+  </div>
+</form>
+
+
+</div>
+                
+                
+                
+                </div>
                     <ul class="list-inline">
                         <li class="list-inline-item mr-4"><i class="icon ion-md-checkmark-circle-outline lead text-primary mr-2"></i> Calidad</li>
                         <li class="list-inline-item mr-4"><i class="icon ion-md-checkmark-circle-outline lead text-primary mr-2"></i> Confianza</li>
@@ -149,22 +200,25 @@
                 <div class="card-body p-5">
                     <h3 class="font-weight-bold">Estado de tu equipo</h3>
                     <p class="text-muted mb-4">Por favor si quiere saber el estado de su equipo ingrese los siguientes datos</p>
-                    <form>
+                    <form action="./tabla.php" id="estatus1" method="POST">
                         <div class="form-row">
                           <div class="col-12 col-md-3 my-3">
-                            <input type="text" class="form-control shadow" placeholder="Nombre">
+                            <input type="text" name="Nombre" class="form-control shadow" placeholder="Nombre" required>
                           </div>
                           <div class="col-12 col-md-3 my-3">
-                            <input type="text" class="form-control shadow" placeholder="No. servicio">
+                            <input type="text" name="Servicio" class="form-control shadow" placeholder="No. servicio" required>
                           </div>
+    
                           <div class="col-12 col-md-3 my-3">
-                            <input type="text" class="form-control shadow" placeholder="Teléfono">
-                          </div>
-                          <div class="col-12 col-md-3 my-3">
-                            <button type="submit" class="btn btn-primary w-100 shadow">Estado de mi equipo</button>
+                            
+                    
+                          
                           </div>
                         </div>
+                        <input type="submit" id="estado"  class="btn btn-primary w-100 shadow" >
+
                       </form>
+                      
                 </div>
             </div>
         </div>
@@ -190,5 +244,8 @@
             </div>
         </div>
     </footer>
+    <script src="../GIT/js/citasaltas.js"></script>
+    
+</body>
 </body>
 </html>

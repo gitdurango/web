@@ -118,6 +118,7 @@ small { font-weight: 300; }
 
 .form-control:focus {
     background-color: var(--dark-xx);
+    color: white;
 }
 
 @media (max-width: 575.98px) {
@@ -234,3 +235,41 @@ small { font-weight: 300; }
     margin: 10px auto;
 }
 
+.bg-image-y{
+    background-color: #111111;
+}
+
+#imagensemaforo {
+width: 60%;
+display: block;
+margin: 0 auto;
+}
+
+label{
+    color:white;
+    font-size: 20px;
+}
+
+.modal-content{
+ background-color: #111111;
+}
+
+/*#form34{
+    color: white;
+}
+#form29{
+    color: white;
+}
+#form32{
+    color: white;
+}
+#form8{
+    color: white;
+}
+*/
+input{
+    color: white;
+}
+.form-control{
+    color: #fff;
+}

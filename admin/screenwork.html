@@ -37,15 +37,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="#">Productos</a>
+                        <a class="nav-link" href="../productos.html">Productos</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="#">Servicios</a>
+                        <a class="nav-link" href="../servicios.html">Servicios</a>
                     </li>
-                        <a class="nav-link text-light font-weight-bold" href="#">Inventario</a>
+                        <a class="nav-link text-light font-weight-bold" href="./inventario.html">Inventario</a>
                     </li>
                 </ul>
             </div>
@@ -63,8 +63,57 @@
                     <a href="#">
                     <div class="card bg-dark border-0 my-3">
                         <div class="card-header p-0 border-0">
-                            <button type="submit" class="btn btn-primary w-100 shadow">Servicio</button>
-                            <button type="submit" class="btn btn-primary w-100 shadow">Producto</button>
+                            
+                            <a href="" class="btn btn-primary w-100 shadow" data-toggle="modal" data-target="#modalContactForm2">Producto
+                            </a>
+                            <form class="modal fade" id="modalContactForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document" id="citasformulario" enctype="multipart/form-data" method="POST">
+    <div class="modal-content"  id="citas">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Agrega Producto</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form34">Nombre</label>
+          <input type="text" id="form34" name="nombre" class="form-control validate">
+          
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix red-text"></i>
+          <label data-error="wrong" data-success="right" for="form29">Descripcion</label>
+          <input type="email" id="form29" name="descripcion" class="form-control validate">
+          
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form32">proveedor</label>
+          <input type="text" id="form32" name="proveedor" class="form-control validate">
+          
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form8">Precio</label>
+          <input type="text" id="form8" name="precio" class="md-textarea form-control" rows="4"></input>
+          
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <a href="" id="enviar" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm2">Cerrar</a>
+        <button type="button" class="btn btn-primary" id="btnEliminar">Si</button>
+    </div>
+    </div>
+  </div>
+</form>
+
                         </div>
                         <div class="card-body bg-dark rounded-bottom">
                             <h6 class="text-light font-weight-bold mb-0">GIT</h6>
@@ -87,52 +136,167 @@
                         </a>
                 </div>
                 <div class="col-lg-4">
-                    <a href="#">
+                    
                         <div class="card bg-dark border-0 my-3">
                             <div class="card-header p-0 border-0">
-                                <button type="submit" class="btn btn-primary w-100 shadow">Factura</button>
-                                <button type="submit" class="btn btn-primary w-100 shadow">Movimientos</button>                            </div>
+                              <a href="../PDF/app/Productos/index.php" class="btn btn-primary w-100 shadow">Registro de Productos</a>
+                              <a href="../PDF/app/Servicios/index.php" class="btn btn-primary w-100 shadow">Registro de Servicios</a>
+                                                        </div>
                             <div class="card-body bg-dark rounded-bottom">
                                 <h6 class="text-light font-weight-bold mb-0">GIT</h6>
                                 <small class="d-block text-muted mb-3">Datos de la empresa</small>
                             </div>
                         </div>
-                        </a>
+                        
                 </div>
             </div>
         </div>
-        <h2 class="text-center"><BR> <span class="text-primary font-weight-bold">GIT REPARACIÓN Y SERVICIOS</span></h2>
-        <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre del servicio/producto</th>
-                <th scope="col">Costo</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Formateo de laptop HP</td>
-                <td>$250</td>
-                <td>$250</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Instalación de antivirus Avast</td>
-                <td>$300</td>
-                <td>$550</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Cambio de display de Laptop</td>
-                <td>$2000</td>
-                <td>$2550</td>
-              </tr>
-            </tbody>
-          </table>
-          <button type="submit" class="btn btn-primary w-100 shadow">Cobrar</button>
+        <div>
+
+       
+        <div class="tamano">
+            <a href="" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm">Agregar venta o servicio
+            </a>
+       
+        <form class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog" role="document" id="serviciosformulario" enctype="multipart/form-data" method="POST">
+    <div class="modal-content" id="servicios">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Venta o servicio</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form ">
+          <i class="fas fa-user prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form34">Nombre</label>
+          <input type="text" id="Nombre" name="Nombre" class="form-control validate">
+          
+          
+        </div>
+
+        <div class="md-form ">
+          <i class="fas fa-envelope prefix red-text"></i>
+          <label data-error="wrong" data-success="right" for="form29">Fecha</label>
+          <input type="date" id="Fecha" name="Fecha" class="form-control validate">
+         
+        </div>
+
+        <div class="md-form ">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form32">Recibe</label>
+          <input type="text" id="Recibe" name="Recibe" class="form-control validate">
+          
+          
+        </div>
+
+        <div class="md-form ">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form32">Telefono</label>
+          <input type="text" id="Telefono" name="Telefono" class="form-control validate">
+          
+          
+        </div>
+
+        <div class="md-form ">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form32">Equipo</label>
+            <input type="text" id="Equipo" name="Equipo" class="form-control validate">
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Marca/Modelo</label>
+            <input type="text" id="MarcaModelo" name="MarcaModelo" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Color</label>
+            <input type="text" id="Color" name="Color" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Enciende</label>
+            <input type="text" id="Enciende" name="Enciende" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Cargador</label>
+            <input type="text" id="Cargador" name="Cargador" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Daños</label>
+            <input type="text" id="Daños" name="Daños" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Comentarios</label>
+            <input type="text" id="Comentarios" name="Comentarios" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Contraseña</label>
+            <input type="text" id="Contraseña" name="Contraseña" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Descripcion</label>
+            <input type="text" id="Descripcion" name="Descripcion" class="form-control validate">
+            
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Estimado</label>
+            <input type="text" id="Estimado" name="Estimado" class="form-control validate">
+            
+           
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Anticipo</label>
+            <input type="text" id="Anticipo" name="Anticipo" class="form-control validate">
+            
+          </div>
+          
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <a href="" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm">Cerrar</a>
+        <button type="button" class="btn btn-primary" id="btnenviar">Si</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+        
     </section>
     <footer class="bg-dark-x py-5 border-top">
         <div class="container">
@@ -154,5 +318,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/clientesaltas.js"></script>
+    <script src="../js/productoaltas.js"></script>
 </body>
 </html>
