@@ -1,7 +1,7 @@
 <?php 
 
     $reporte = array();
-    $mysqli = new mysqli("localhost","carlos","i4ywiBKkMdv2cuxO","gitecnologias");
+    $mysqli = new mysqli("localhost","Admin","GITecnologias4586","gitecnologias");
     $mysqli -> set_charset('utf8');
     $statement = $mysqli->prepare("SELECT * FROM clientes ");
     $statement -> execute();

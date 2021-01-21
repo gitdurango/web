@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+
+
+
+?>
 <!doctype html>
 <html lang="es-MX">
 
@@ -18,14 +25,11 @@
 
     <!-- Ionic Icons -->
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
     <title>GIT TECNOLOGIAS</title>
-
-
 </head>
 
 <body>
@@ -55,50 +59,46 @@
         </div>
     </nav>
 
-    <section class="bg-dark py-5">
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-lg-6 align-self-center">
-                    <h1 class="mb-4"><span class="font-weight-bold text-primary"> <BR>BIENVENIDO!</span></h1>
-                    <p class="lead text-muted mb-4">
-                        Esperamos que te encuentres bien el día de hoy antes que todo, por favor,
-                        para comenzar tu turno, inicia sesión.
-                    </p>
-                    <div class="mb-5">
-
-                    </div>
-                    <ul class="list-inline">
-                        <li class="list-inline-item mr-4"><i class="icon ion-md-checkmark-circle-outline lead text-primary mr-2"></i> Calidad</li>
-                        <li class="list-inline-item mr-4"><i class="icon ion-md-checkmark-circle-outline lead text-primary mr-2"></i> Confianza</li>
-                        <li class="list-inline-item"><i class="icon ion-md-checkmark-circle-outline lead text-primary mr-2"></i> Rapidez</li>
-                        <li class="list-inline-item"><i class="icon ion-md-checkmark-circle-outline lead text-primary mr-2"></i> Seguridad</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <img src="../img/logo.png" class="img-fluid">
-                </div>
-            </div>
-        </div>  
-    </section>
-    <section class="bg-image-x d-flex py-5">
-        <div class="container align-self-center">
-            <div class="w-75 text-center mx-auto mb-5">
-                <h2 class="text-center">GIT REPARACIÓN Y SERVICIOS<BR> <span class="text-primary font-weight-bold">SOMOS TU MEJOR OPCION</span></h2>
-            </div>
-            <div class="row">
+    <section class="bg-image-y py-5">
+        <div class="cont">
+                <img src="../img/logo.png" alt="Logo de la empresa" id="img-div-mov">
         </div>
-        <img src="../img/person.png" alt="Imagen de inicio de sesión" id="personaLogin">
-        <form action="" class="formularioEmpleado">
-            <label for="idempleado" class="labelEmpleado">
-                <input type="text" placeholder="Introduzca el nombre del empleado" id=idempleado required>
-            </label>
-            <label for="passempleado" class="labelEmpleado">
-                <input type="password" placeholder="Introduzca la contraseña del empleado" id=passempleado required>
-            </label>
-            <button type="submit" class="btn btn-primary w-100 shadow">Acceder</button>
-        </form>
+        <h2 class="text-center"><BR> <span class="text-primary font-weight-bold">GIT REPARACIÓN Y SERVICIOS</span></h2>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Provedor</th>
+                <th scope="col">Nombre del servicio/producto</th>
+                <th scope="col">Costo</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>SAMSUNG</td>
+                <td>Impresora</td>
+                <td>$700</td>
+                <td>$700</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>KINGSTON</td>
+                <td>Memorias USB de 16 GB</td>
+                <td>$2500</td>
+                <td>$2500</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>HP</td>
+                <td>Laptop HP de 15"</td>
+                <td>$25500</td>
+                <td>$25500</td>
+              </tr>
+            </tbody>
+          </table>
     </section>
-
     <footer class="bg-dark-x py-5 border-top">
         <div class="container">
             <div class="row">

@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+
+
+
+?>
 <!doctype html>
 <html lang="es-MX">
 
@@ -45,6 +52,9 @@
                     </li>
                     <li class="nav-item mr-3">
                         <a class="nav-link" href="../servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="../servicios.html" ></a>
                     </li>
                         <a class="nav-link text-light font-weight-bold" href="./inventario.html">Inventario</a>
                     </li>

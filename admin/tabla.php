@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+
+
+
+?>
 <!doctype html>
 <html lang="es-MX">
 
@@ -55,7 +62,7 @@
         </nav>
         <section class="bg-image-y">
             <div class="container">
-                <a class="navbar-brand font-weight-bold" href="#">ESTATUS DE SU EQUIPO (GITECNOLOGIAS)</a>
+                <a class="navbar-brand font-weight-bold" href="#">ESTATUS DE SU EQUIPO (GITECNOLOGIAS) <?php echo $_SESSION["usuario"]; ?> </a>
                     <div class="row">
                         <br>
                         <div class="col">
@@ -66,10 +73,7 @@
         
         <table class="table table-hover table-condensed table-bordered" style="color:white;">
 		<caption>
-			<button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo">
-				Agregar nuevo 
-				<span class="glyphicon glyphicon-plus"></span>
-			</button>
+
 		</caption>
 			<tr>
 				<td>Nombre</td>

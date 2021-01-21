@@ -1,8 +1,8 @@
 <?php
-    $user="carlos";
+    $user="Admin";
 	$user_db="gitecnologias";
 	$server="localhost";
-	$password="i4ywiBKkMdv2cuxO";
+	$password="GITecnologias4586";
 
 	$enlace = mysqli_connect($server, $user, $password, $user_db);
 
