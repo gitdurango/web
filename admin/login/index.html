@@ -14,14 +14,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-    <!-- Nuestro css-->
+    <!-- CSS-->
     <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+
+    <!-- Animaciones-->
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
 </head>
 <body>
     <div class="modal-dialog text-center">
         <div class="col-sm-8 main-section">
-            <div class="modal-content">
+            <div class="modal-content animate__animated animate__backInDown">
                 <div class="col-12 user-img">
                     <img src="static/img/user.png" th:src="@{/img/user.png}"/>
                 </div>
@@ -33,7 +40,9 @@
                         <input type="password" class="form-control" placeholder="Contrasena" name="password"/>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
-                    <a href="../../php/validar.php">XD</a>
+                       <!--  <a href="../../php/validar.php">XD</a>-->
+
+                   
                 </form>
             </div>
         </div>
