@@ -137,7 +137,35 @@
         </div>
     </section>
 
-    
+    <section class="bg-image-x d-flex py-5">
+
+    <div class="container mt-3">
+        <div class="row">
+                            <?php
+                    include("./php/conexion.php"); 
+                    $consulta="select * from productos";
+                    $resultado = mysqli_query($enlace,$consulta);
+                    while($row=mysqli_fetch_row($resultado)){
+                        ?>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card-header p-0 border-0">
+                        <img class="img-fluid rounded-top" src="./img/<?php echo $row[5]?>" alt="Card image cap">
+                        <div class="card-body bg-dark rounded-bottom">
+                            <h5 class="card-title"><?php echo $row[1]?></h5>
+                            <p class="card-text"><?php echo $row[2]?></p>
+                            <a href="#" class="btn btn-primary">$ <?php echo $row[4]?></a>
+                        </div>
+                        </div>
+                        </div>
+                        <?php
+
+                    }
+
+                ?>
+        </div>
+    </div>
+    </section>
+
 
     <footer class="bg-dark-x py-5 border-top">
         <div class="container">

@@ -62,7 +62,7 @@ session_start();
         </nav>
         <section class="bg-image-y">
             <div class="container">
-                <a class="navbar-brand font-weight-bold" href="#">ESTATUS DE SU EQUIPO (GITECNOLOGIAS) <?php echo $_SESSION["usuario"]; ?> </a>
+                <a class="navbar-brand font-weight-bold" href="#">ESTATUS DE SU EQUIPO (GITECNOLOGIAS) </a>
                     <div class="row">
                         <br>
                         <div class="col">
@@ -73,7 +73,7 @@ session_start();
         
         <table class="table table-hover table-condensed table-bordered" style="color:white;">
 		<caption>
-
+            
 		</caption>
 			<tr>
 				<td>Nombre</td>
@@ -125,7 +125,7 @@ session_start();
 				</td>
 				<td>
 					<button class="btn btn-danger glyphicon glyphicon-remove" 
-					onclick="preguntarSiNo('<?php echo $row[0] ?>')">
+					onclick="eliminar('<?php echo $row[0] ?>')">
 						
 					</button>
 				</td>

@@ -109,7 +109,7 @@
 				</td>
 				<td>
 					<button class="btn btn-danger glyphicon glyphicon-remove" 
-					onclick="preguntarSiNo('<?php echo $row[0] ?>')">
+					onclick="eliminar('<?php echo $row[0] ?>')">
 						
 					</button>
 				</td>
@@ -141,6 +141,31 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" id="actualizadatos" data-dismiss="modal">Actualizar</button>
         
+      </div>
+    </div>
+  </div>
+</div>
+
+       <!-- Modal para agregar nuevo usuario -->
+
+<div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Agrega nueva persona</h4>
+      </div>
+      <div class="modal-body">
+        	<label>Nombre de Usuario</label>
+        	<input type="text" name="" id="nombre" class="form-control input-sm">
+        	<label>Contraseña</label>
+        	<input type="text" name="" id="password" class="form-control input-sm">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="guardarnuevo">
+        Agregar
+        </button>
+       
       </div>
     </div>
   </div>

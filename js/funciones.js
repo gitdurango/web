@@ -49,3 +49,30 @@ function actualizarDatos(e){
                 }
             });
 }
+
+function eliminar(id){
+	alertify.confirm('Eliminar Datos', '¿Esta seguro de eliminar este usuario?', 
+					function(){ eliminarServicio(id) }
+                , function(){ alertify.error('Se cancelo')});
+}
+
+
+function eliminarServicio(id){
+
+	cadena="id=" + id;
+
+		$.ajax({
+			type:"POST",
+			url:"../php/eliminarServicio.php",
+			data:cadena,
+			success:function(r){
+				if(r==1){
+					alertify.alert("Servicio eliminado con exito", function(){
+                        location.reload();
+                    });
+				}else{
+					alertify.error("Fallo el servidor :(");
+				}
+			}
+		});
+}

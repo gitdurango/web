@@ -293,6 +293,12 @@ session_start();
             <input type="text" id="Anticipo" name="Anticipo" class="form-control validate">
             
           </div>
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Imagen</label>
+            <input type="file" id="archivo" name="archivo" class="form-control validate">
+            
+          </div>
           
       </div>
       <div class="modal-footer d-flex justify-content-center">
