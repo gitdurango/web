@@ -33,7 +33,7 @@ function actualizarDatos(e){
             
             $.ajax({
                 type:"POST",
-                url:"../php/actualizaCliente.php",
+                url:"../admin/php/actualizaCliente.php",
                 data:cadena,
                 success:function(r){
                     
@@ -63,7 +63,7 @@ function eliminarServicio(id){
 
 		$.ajax({
 			type:"POST",
-			url:"../php/eliminarServicio.php",
+			url:"../admin/php/eliminarServicio.php",
 			data:cadena,
 			success:function(r){
 				if(r==1){

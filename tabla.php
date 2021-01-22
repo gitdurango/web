@@ -64,7 +64,7 @@
                     </div>
         </section>
              <?php
-                include ("./php/conexion.php");
+                include ("./admin/php/conexion.php");
                 $nombre=isset($_POST['Nombre'])?$_POST['Nombre']:1;
                 $numeroservicio=$_POST['Servicio'];
                 $query = mysqli_query($enlace,"SELECT * FROM `clientes` WHERE Nombre='$nombre' AND Servicio=$numeroservicio" );

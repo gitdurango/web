@@ -1,8 +1,15 @@
 <?php 
 session_start();
+error_reporting(0);
+$sessionactiva=$_SESSION["usuario"];
+if($sessionactiva==null || $sessionactiva=''){
+     echo "No eres administrador";
+     
+     die();
+}
+//session_destroy();
 
-
-
+//header('Location:../index.html');
 
 ?>
 <!doctype html>
@@ -44,18 +51,28 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="./index.html">Inicio</a>
+                        <a class="nav-link" href="./index.php">Inicio</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="../productos.html">Productos</a>
+                        <a class="nav-link" href="./screenwork.php">Servicios</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="../servicios.html">Servicios</a>
+                        <a class="nav-link" href="./php/usuarios.php">Usuarios</a>
                     </li>
-                        <a class="nav-link text-light font-weight-bold" href="./inventario.html">Inventario</a>
+                    
+
+                        <a class="nav-link text-light font-weight-bold" href="./tabla.php">Clientes</a>
+                        
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="./index.php">  <?php echo $_SESSION["usuario"]; ?> </a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="./php/cerrarsession.php">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     </nav>
 
@@ -73,7 +90,9 @@ session_start();
                             
                             <a href="" class="btn btn-primary w-100 shadow" data-toggle="modal" data-target="#modalContactForm2">Producto
                             </a>
-                            <form class="modal fade" id="modalContactForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                            
+            
+                            <form  class="modal fade" id="modalContactForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document" id="citasformulario" enctype="multipart/form-data" method="POST">
     <div class="modal-content"  id="citas">
@@ -100,7 +119,7 @@ session_start();
 
         <div class="md-form mb-5">
           <i class="fas fa-tag prefix grey-text"></i>
-          <label data-error="wrong" data-success="right" for="form32">proveedor</label>
+          <label data-error="wrong" data-success="right" for="form32">Proveedor</label>
           <input type="text" id="form32" name="proveedor" class="form-control validate">
           
         </div>
@@ -111,8 +130,14 @@ session_start();
           <input type="text" id="form8" name="precio" class="md-textarea form-control" rows="4"></input>
           
         </div>
-
+        <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="form8">Imagen</label>
+            <input type="file" id="archivo" name="archivo" class="form-control validate">
+            
+          </div>
       </div>
+
       <div class="modal-footer d-flex justify-content-center">
         <a href="" id="enviar" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm2">Cerrar</a>
         <button type="button" class="btn btn-primary" id="btnEliminar">Si</button>
@@ -234,25 +259,28 @@ session_start();
           <div class="md-form">
             <i class="fas fa-pencil prefix grey-text"></i>
             <label data-error="wrong" data-success="right" for="form8">Enciende</label>
-            <input type="text" id="Enciende" name="Enciende" class="form-control validate">
-            
-            
+            <select name="Enciende" id="Enciende" class="form-control validate">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            </select>
           </div>
 
           <div class="md-form">
-            <i class="fas fa-pencil prefix grey-text"></i>
+          <i class="fas fa-pencil prefix grey-text"></i>
             <label data-error="wrong" data-success="right" for="form8">Cargador</label>
-            <input type="text" id="Cargador" name="Cargador" class="form-control validate">
-            
-            
+            <select name="Cargador" id="Cargador" class="form-control validate">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            </select>
           </div>
 
           <div class="md-form">
-            <i class="fas fa-pencil prefix grey-text"></i>
+          <i class="fas fa-pencil prefix grey-text"></i>
             <label data-error="wrong" data-success="right" for="form8">Daños</label>
-            <input type="text" id="Daños" name="Daños" class="form-control validate">
-            
-            
+            <select name="Daños" id="Daños" class="form-control validate">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            </select>
           </div>
 
           <div class="md-form">
@@ -293,12 +321,7 @@ session_start();
             <input type="text" id="Anticipo" name="Anticipo" class="form-control validate">
             
           </div>
-          <div class="md-form">
-            <i class="fas fa-pencil prefix grey-text"></i>
-            <label data-error="wrong" data-success="right" for="form8">Imagen</label>
-            <input type="file" id="archivo" name="archivo" class="form-control validate">
-            
-          </div>
+          
           
       </div>
       <div class="modal-footer d-flex justify-content-center">

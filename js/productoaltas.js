@@ -8,9 +8,9 @@ function insertacita(e) {
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     console.log("esta jalando")
+      alert("Se ha añadido el producto")
     }
   };
-  xhttp.open("POST", "../php/altaproducto.php", true);
+  xhttp.open("POST", "../admin/php/altaproducto.php", true);
   xhttp.send(datos);
 }

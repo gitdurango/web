@@ -24,7 +24,7 @@ function actualizarDatos(e){
             
             $.ajax({
                 type:"POST",
-                url:"../php/actualizausuario.php",
+                url:"./actualizausuario.php",
                 data:cadena,
                 success:function(r){
                     
@@ -53,7 +53,7 @@ function agregarUsuario(e){
 
 	$.ajax({
 		type:"POST",
-		url:"../php/agregarUsuario.php",
+		url:"./agregarUsuario.php",
 		data:cadena,
 		success:function(r){
 			if(r==1){
@@ -81,7 +81,7 @@ function eliminarUsuario(id){
 
 		$.ajax({
 			type:"POST",
-			url:"../php/eliminarUsuario.php",
+			url:"./eliminarUsuario.php",
 			data:cadena,
 			success:function(r){
 				if(r==1){

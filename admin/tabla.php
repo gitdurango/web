@@ -1,8 +1,15 @@
 <?php 
 session_start();
+error_reporting(0);
+$sessionactiva=$_SESSION["usuario"];
+if($sessionactiva==null || $sessionactiva=''){
+     echo "No eres administrador";
+     
+     die();
+}
+//session_destroy();
 
-
-
+//header('Location:../index.html');
 
 ?>
 <!doctype html>
@@ -44,21 +51,31 @@ session_start();
                 </button>
     
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="./productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <a class="nav-link" href="./servicios.html">Servicios</a>
-                        </li>
-                            <a class="nav-link text-light font-weight-bold" href="./contactanos.html">Contáctanos</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="./index.php">Inicio</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="./screenwork.php">Servicios</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="./php/usuarios.php">Usuarios</a>
+                    </li>
+                    
+
+                        <a class="nav-link text-light font-weight-bold" href="./tabla.php">Clientes</a>
+                        
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="./index.php">  <?php echo $_SESSION["usuario"]; ?> </a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="./php/cerrarsession.php">Cerrar sesión</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+        </div>
         </nav>
         <section class="bg-image-y">
             <div class="container">
@@ -87,7 +104,7 @@ session_start();
 
             <?php 
             
-                require('../php/conexion.php');
+                require('./php/conexion.php');
                 $query = mysqli_query($enlace,"SELECT * FROM `clientes` " );
                 
 
@@ -157,7 +174,11 @@ session_start();
         	<label>Descripcion</label>
         	<input type="text" name="" id="descripcionu" class="form-control input-sm">
             <label>Estado</label>
-        	<input type="text" name="" id="estadou" class="form-control input-sm">
+        	<select name="Cargador" id="estadou" class="form-control validate">
+            <option value="1">Sin Revisar</option>
+            <option value="2">En Revisión</option>
+            <option value="3">Reparada</option>
+            </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" id="actualizadatos" data-dismiss="modal">Actualizar</button>

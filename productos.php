@@ -40,7 +40,7 @@
                         <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="./productos.html">Productos</a>
+                        <a class="nav-link" href="./productos.php">Productos</a>
                     </li>
                     <li class="nav-item mr-3">
                         <a class="nav-link" href="./servicios.html">Servicios</a>
@@ -50,99 +50,16 @@
                 </ul>
             </div>
         </div>
-    </nav>
-    <section class="bg-image-x d-flex py-5">
-        <div class="container align-self-center">
-            <div class="w-75 text-center mx-auto mb-5">
-                <h2 class="text-center">BIENVENIDO!! <BR> <span class="text-primary font-weight-bold">AQUI TE MOSTRAMOS NUESTROS PRODUCTOS</span></h2>
-                <p class="lead text-muted">Cualquier procucto que necesites, por pedido te lo podemos conseguir </p>
-                        <h2>DESCUBRE NUESTROS PRODUCTOS<BR> <span class="text-primary font-weight-bold">TENEMOS PRODUCTOS COMO...</span></h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <a href="#">
-                    <div class="card bg-dark border-0 my-3">
-                        <div class="card-header p-0 border-0">
-                            <img src="img/G.jpg" class="img-fluid rounded-top">
-                        </div>
-                        <div class="card-body bg-dark rounded-bottom">
-                            <h6 class="text-light font-weight-bold mb-0">Cables usb tipo c y micro usb</h6>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#">
-                        <div class="card bg-dark border-0 my-3">
-                            <div class="card-header p-0 border-0">
-                                <img src="img/F.jpg" class="img-fluid rounded-top">
-                            </div>
-                            <div class="card-body bg-dark rounded-bottom">
-                                <h6 class="text-light font-weight-bold mb-0">Memorias usb 16, 32, 64, 128 gb</h6>
-                            </div>
-                        </div>
-                        </a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#">
-                        <div class="card bg-dark border-0 my-3">
-                            <div class="card-header p-0 border-0">
-                                <img src="img/D.jpg" class="img-fluid rounded-top">
-                            </div>
-                            <div class="card-body bg-dark rounded-bottom">
-                                <h6 class="text-light font-weight-bold mb-0">Cargadores para celular</h6>
-                                <div>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#">
-                        <div class="card bg-dark border-0 my-3">
-                            <div class="card-header p-0 border-0">
-                                <img src="img/C.jpg" class="img-fluid rounded-top">
-                            </div>
-                            <div class="card-body bg-dark rounded-bottom">
-                                <h6 class="text-light font-weight-bold mb-0">Cable hdmi</h6>
-                            </div>
-                        </div>
-                        </a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#">
-                        <div class="card bg-dark border-0 my-3">
-                            <div class="card-header p-0 border-0">
-                                <img src="img/B.jpg" class="img-fluid rounded-top">
-                            </div>
-                            <div class="card-body bg-dark rounded-bottom">
-                                <h6 class="text-light font-weight-bold mb-0">Cable usb para impresora</h6>
-                            </div>
-                        </div>
-                        </a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#">
-                        <div class="card bg-dark border-0 my-3">
-                            <div class="card-header p-0 border-0">
-                                <img src="img/A.jpg" class="img-fluid rounded-top">
-                            </div>
-                            <div class="card-body bg-dark rounded-bottom">
-                                <h6 class="text-light font-weight-bold mb-0">Cable de corriente para computadora, impresora o monitor</h6>
-                            </div>
-                        </div>
-                        </a>
-                </div>
-            </div>
         </div>
-    </section>
+    </nav>
+    
 
     <section class="bg-image-x d-flex py-5">
 
     <div class="container mt-3">
         <div class="row">
                             <?php
-                    include("./php/conexion.php"); 
+                    include("./admin/php/conexion.php"); 
                     $consulta="select * from productos";
                     $resultado = mysqli_query($enlace,$consulta);
                     while($row=mysqli_fetch_row($resultado)){
@@ -151,9 +68,12 @@
                         <div class="card-header p-0 border-0">
                         <img class="img-fluid rounded-top" src="./img/<?php echo $row[5]?>" alt="Card image cap">
                         <div class="card-body bg-dark rounded-bottom">
-                            <h5 class="card-title"><?php echo $row[1]?></h5>
+                        <center>
+                        <h5 class="card-title"><?php echo $row[1]?></h5>
                             <p class="card-text"><?php echo $row[2]?></p>
                             <a href="#" class="btn btn-primary">$ <?php echo $row[4]?></a>
+                        </center>
+
                         </div>
                         </div>
                         </div>

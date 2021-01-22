@@ -8,9 +8,10 @@ function insertacita(e) {
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     console.log("esta jalando")
+     console.log("Works!")
+     alert("Se ha añadido la cita")
     }
   };
-  xhttp.open("POST", "./php/altascitas.php", true);
+  xhttp.open("POST", "./admin/php/altascitas.php", true);
   xhttp.send(datos);
 }

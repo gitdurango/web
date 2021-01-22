@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Mi primer Login</title>
+    <title>Iniciar Sesión</title>
 
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -32,13 +32,18 @@
                 <div class="col-12 user-img">
                     <img src="static/img/user.png" th:src="@{/img/user.png}"/>
                 </div>
-                <form class="col-12" th:action="@{/login}" method="POST" action="../../php/validar.php">
+                <form class="col-12" th:action="@{/login}" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                     <div class="form-group" id="user-group">
                         <input type="text" class="form-control" placeholder="Nombre de usuario" name="username"/>
                     </div>
                     <div class="form-group" id="contrasena-group">
                         <input type="password" class="form-control" placeholder="Contrasena" name="password"/>
                     </div>
+                    <?php if(!empty($error)): ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $error; ?>
+                                        </div>
+                                        <?php endif; ?>
                     <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
                          
 

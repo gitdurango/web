@@ -9,5 +9,5 @@ function consulta(file, html){
     };
     xhttp.open("GET", file, true);
     xhttp.send();
-    console.log ("esta jalando");
+    console.log ("Esta funcionando..");
   }

@@ -7,7 +7,7 @@ if($sessionactiva==null || $sessionactiva=''){
      
      die();
 }
-session_destroy();
+//session_destroy();
 
 //header('Location:../index.html');
 
@@ -54,24 +54,24 @@ session_destroy();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="./index.html">Inicio</a>
+                        <a class="nav-link" href="./index.php">Inicio</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="../productos.html">Productos</a>
+                        <a class="nav-link" href="./screenwork.php">Servicios</a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="../servicios.html">Servicios</a>
+                        <a class="nav-link" href="./php/usuarios.php">Usuarios</a>
                     </li>
                     
 
-                        <a class="nav-link text-light font-weight-bold" href="./inventario.html">Inventario</a>
+                        <a class="nav-link text-light font-weight-bold" href="./tabla.php">Clientes</a>
                         
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="../servicios.html">  <?php echo $_SESSION["usuario"]; ?> </a>
+                        <a class="nav-link" href="./index.php">  <?php echo $_SESSION["usuario"]; ?> </a>
                     </li>
                     <li class="nav-item mr-3">
-                        <a class="nav-link" href="../php/cerrarsession.php">Cerrar sesión</a>
+                        <a class="nav-link" href="./php/cerrarsession.php">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>

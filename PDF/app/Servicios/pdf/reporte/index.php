@@ -34,7 +34,7 @@ function getPDF($reporte){
           </tr>
         </thead>
         <tbody>';
-
+         $total=0;
           foreach($reporte as $rp){
           $reportePDF.= '<tr>
             <td class="no">'.$rp["Servicio"].'</td>
@@ -43,24 +43,15 @@ function getPDF($reporte){
             <td class="qty">'.$rp["MarcaModelo"].'</td>
             <td class="total">'.$rp["Estimado"].'</td>
           </tr>';
+          $total=$total+$rp["Estimado"];
           }
           $reportePDF .='
         </tbody>
         <tfoot>
           <tr>
             <td colspan="2"></td>
-            <td colspan="2">SUBTOTAL</td>
-            <td>$5,200.00</td>
-          </tr>
-          <tr>
-            <td colspan="2"></td>
-            <td colspan="2">IVA 16%</td>
-            <td>$1,300.00</td>
-          </tr>
-          <tr>
-            <td colspan="2"></td>
             <td colspan="2">TOTAL</td>
-            <td>$6,500.00</td>
+            <td>'.$total.'</td>
           </tr>
         </tfoot>
       </table>
