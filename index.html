@@ -76,49 +76,38 @@
                             <a href="" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm">Agenda con nosotros
                           </a>
                     <a href="https://api.whatsapp.com/send?phone=+526182353619" class="btn btn-secondary mb-3">consultanos</a>
-                    <form class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document" id="citasformulario" enctype="multipart/form-data" method="POST">
-    <div class="modal-content"  id="citas">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Agenda tu cita</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+                    
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo">
+                        Agregar nuevo 
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+
+<div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Agrega nueva persona</h4>
+      </div>
+      <div class="modal-body">
+        	<label>Tu nombre</label>
+        	<input type="text" name="" id="nombre" class="form-control input-sm">
+        	<label>Tu correo</label>
+            <input type="text" name="" id="email" class="form-control input-sm">
+            <label>Asunto</label>
+            <input type="teext" name="" id="asunto" class="form-control input-sm">
+            <label>Mensaje</label>
+        	<input type="teext" name="" id="mensaje" class="form-control input-sm">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnAgregar">
+        Agregar
         </button>
+       
       </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="form34" name="nombre" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form34">Tu nombre</label>
-        </div>
-
-        <div class="md-form mb-5">
-          <i class="fas fa-envelope prefix red-text"></i>
-          <input type="email" id="form29" name="email" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Tu email</label>
-        </div>
-
-        <div class="md-form mb-5">
-          <i class="fas fa-tag prefix grey-text"></i>
-          <input type="text" id="form32" name="asunto" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form32">Asusnto</label>
-        </div>
-
-        <div class="md-form">
-          <i class="fas fa-pencil prefix grey-text"></i>
-          <textarea type="text" id="form8" name="mensaje" class="md-textarea form-control" rows="4"></textarea>
-          <label data-error="wrong" data-success="right" for="form8">Tu mensaje</label>
-        </div>
-
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <a href="" id="enviar" class="btn btn-primary mr-2 mb-3 shadow" data-toggle="modal" data-target="#modalContactForm">Cerrar</a>
-        <button type="button" class="btn btn-primary" id="btnEliminar">Si</button>
-    </div>
     </div>
   </div>
-</form>
+</div>
 
 
 </div>
@@ -244,8 +233,19 @@
             </div>
         </div>
     </footer>
-    <script src="../GIT/js/citasaltas.js"></script>
-    
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script> 
+    <script src="./lib/alertify/alertify.min.js"></script>
+    <!-- include the style -->
+   <link rel="stylesheet" href="./lib/alertify/css/alertify.min.css" />
+   <!-- include a theme -->
+   <link rel="stylesheet" href="./lib/alertify/css/themes/default.min.css" />
+
+   <script src="./js/citasaltas.js"></script>
+
 </body>
 </body>
 </html>

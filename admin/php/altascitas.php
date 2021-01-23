@@ -8,10 +8,7 @@ $mensaje=$_POST['mensaje'];
 
 
 $sql = "INSERT INTO citas (nombre, email, asunto, mensaje) VALUES ('$nombre', '$email', '$asunto', '$mensaje');";
-if(mysqli_query($enlace,$sql)){
-    echo "Categoria agregada correctamente";
-}else{
-    echo "Algo salio mal";
-}
-myqli_close($enlace);
+echo $result=mysqli_query($enlace,$sql);
+
+
 ?>
