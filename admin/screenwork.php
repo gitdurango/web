@@ -354,6 +354,12 @@ if($sessionactiva==null || $sessionactiva=''){
             </div>
         </div>
     </footer>
+    <script src="../lib/alertify/alertify.min.js"></script>
+    <!-- include the style -->
+   <link rel="stylesheet" href="../lib/alertify/css/alertify.min.css" />
+   <!-- include a theme -->
+   <link rel="stylesheet" href="../lib/alertify/css/themes/default.min.css" />
+
     <script src="../js/clientesaltas.js"></script>
     <script src="../js/productoaltas.js"></script>
 </body>
