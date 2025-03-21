@@ -1,3 +1,4 @@
+
 ![GIT](https://portafolio-carrete.netlify.app/assets/git-4190d3ce.png)
 
 # GIT TECNOLOGÍAS - Reparación y Servicios
@@ -38,9 +39,7 @@ GIT TECNOLOGÍAS es una plataforma web diseñada para gestionar servicios de rep
     -   Configura las credenciales de la base de datos en el archivo  `admin/php/conexion.php`.        
 3.  **Instalar dependencias**: 
     -   Navega a la carpeta  `PDF/`  y ejecuta:  
-     ```   
-        bash       
-        Copy        
+     ```    
         composer install      
    Esto instalará las dependencias necesarias para la generación de PDF.
 4.  **Configurar el servidor web**:    
