@@ -32,7 +32,7 @@ GIT TECNOLOGÍAS es una plataforma web diseñada para gestionar servicios de rep
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/tuusuario/gitdurango-web.git
+   git clone https://github.com/gitdurango/web.git
    cd gitdurango-web
 2.  **Configurar la base de datos**:    
     -   Importa el archivo SQL proporcionado en la carpeta  `database/`  a tu servidor MySQL.        
