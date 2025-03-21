@@ -1,3 +1,5 @@
+![GIT](https://portafolio-carrete.netlify.app/assets/git-4190d3ce.png)
+
 # GIT TECNOLOGÍAS - Reparación y Servicios
 
 GIT TECNOLOGÍAS es una plataforma web diseñada para gestionar servicios de reparación de equipos electrónicos, venta de productos y seguimiento de clientes. Este proyecto incluye una interfaz de usuario para clientes y un panel de administración para gestionar inventarios, servicios, usuarios y más.
